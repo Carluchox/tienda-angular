@@ -21,4 +21,20 @@ export class ArticuloComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  habilitacionCuadro=false;
+  clienteRegistrado= false;
+  textoRegistro="No hay nadie registrado";
+
+  getRegistroCliente() {
+    this.clienteRegistrado=false;
+  }
+
+  setClienteRegistrado(event:Event) {
+  //alert("El cliente se acaba de registrar.")
+    if ((<HTMLInputElement>event.target).value==="sí") {
+      this.textoRegistro="El cliente se registró exitosamente";
+  } else {
+    this.textoRegistro="No hay nadie registrado";
+  }
+ }
 }

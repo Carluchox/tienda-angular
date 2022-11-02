@@ -1,10 +1,19 @@
-<p>Artículo: {{ nombre }}</p>
+<p>Artículo: {{ articulo.value }}</p>
 <p>Precio: ${{ precio }}</p>
 <p>Medidas: {{ medida }} cm</p>
 <p>Serie: {{ serie.value }} </p>
 <p>Color: {{ colores }}</p>
 
-<p>Introduce la serie Essen:</p> <input type="text" name="Serie" #serie (keyup)="0">
+
+Escribe el artículo Essen que desees: <input type="text" name="Articulo" #articulo (keyup)="0">
+<br>
+Introduce la serie Essen de tu preferencia:<input type="text" name="Serie" #serie (keyup)="0">
 
 <br>
 <br>
+{{textoRegistro}}
+<br>
+Cliente registrado: <input type="radio" name="nRegistro" value="sí" id="registro" [checked]="clienteRegistrado" (click)="setClienteRegistrado($event)"> <br>
+Cliente no registrado: <input type="radio" name="nRegistro" value="no" id="registro" (click)="setClienteRegistrado($event)">
+
+{{getRegistroCliente()}}
