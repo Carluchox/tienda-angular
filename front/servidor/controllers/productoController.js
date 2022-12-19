@@ -1,5 +1,5 @@
 
 
-exports.crearProducto = (req, res) => {
-	console.log('desde crear producto');
-};
+//exports.crearProducto = () => {
+	//console.log('desde crear producto');
+//};

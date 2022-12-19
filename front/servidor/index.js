@@ -8,6 +8,8 @@ conectarDB();
 
 app.use('/api/productos', require('./routes/producto'));
 
+app.use(express.json());
+
 //Definimos ruta principal
 //app.get('/', (req, res) => res.send('Hola Mundo'));
 
